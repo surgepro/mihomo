@@ -1,0 +1,1 @@
+createobject("wscript.shell").run "mihomoautorun.bat",0
