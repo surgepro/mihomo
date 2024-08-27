@@ -1,0 +1,3 @@
+.\mihomo-windows-amd64.exe -d .\
+
+输入命令  .\clash.meta-windows-amd64.exe -d .\  运行clash
