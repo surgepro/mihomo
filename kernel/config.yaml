@@ -1,7 +1,7 @@
 # url 里填写自己的订阅,名称不能重复
 proxy-providers:
   provider1:
-    url: "你的订阅1"
+    url: "你的订阅链接1"
     type: http
     interval: 86400
     health-check: {enable: true,url: "https://www.gstatic.com/generate_204",interval: 300}
@@ -9,7 +9,7 @@ proxy-providers:
       additional-prefix: "[provider1]"
 
   provider2:
-    url: "你的订阅2"
+    url: "你的订阅链接2（如果只有一个机场订阅，删除 provider2 这个数组的所有内容；如果有多个订阅，拷贝 provider2 这个数组的所有内容，provider2 这个值不能一样即可）"
     type: http
     interval: 86400
     health-check: {enable: true,url: "https://www.gstatic.com/generate_204",interval: 300}
@@ -108,11 +108,11 @@ proxy-groups:
 
   - name: 全部节点
     type: select
-    include-all: true
+    include-all-providers: true
 
   - name: 自动选择
     type: url-test
-    include-all: true
+    include-all-providers: true
     tolerance: 10
 
   - name: 默认
